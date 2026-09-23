@@ -1,0 +1,45 @@
+
+  [30;43;1m WARN [39;49;22m[39m Tests\Feature\Phase1\AuthAuthorizationTest[39m
+  [33;1m![39;22m[90m [39m[90mlogin returns token and invalid credentials are rejected[39m[90m [39m[33m→ file_get[39m[90m…[39m [90m1.47s[39m  
+  [33;1m![39;22m[90m [39m[90morganizer can create event and other organizer cannot manage it[39m[90m [39m[33m→ f[39m[90m…[39m [90m0.02s[39m  
+  [33;1m![39;22m[90m [39m[90mbuyer cannot create event and organizer cannot list buyer orders[39m[90m [39m[33m→[39m[90m… [39m [90m0.01s[39m  
+  [33;1m![39;22m[90m [39m[90mother organizer cannot list seats and search is buyer only[39m[90m [39m[33m→ file_g[39m[90m…[39m [90m0.02s[39m  
+
+  [30;43;1m WARN [39;49;22m[39m Tests\Feature\Phase3\ConfirmPurchaseTest[39m
+  [33;1m![39;22m[90m [39m[90mconfirmation is idempotent and creates ticket outbox and delivery a[39m[90m…[39m [90m0.04s[39m  
+  [33;1m![39;22m[90m [39m[90mexpired reservation cannot be confirmed[39m[90m [39m[33m→ file_get_contents(/var/ww[39m[90m…[39m [90m0.02s[39m  
+  [33;1m![39;22m[90m [39m[90mreclaimed expired seat prevents old reservation confirmation[39m[90m [39m[33m→ file[39m[90m…[39m [90m0.02s[39m  
+
+  [30;43;1m WARN [39;49;22m[39m Tests\Feature\Phase3\NotificationPipelineTest[39m
+  [33;1m![39;22m[90m [39m[90moutbox dispatches notification job and marks event published[39m[90m [39m[33m→ file[39m[90m…[39m [90m0.03s[39m  
+  [33;1m![39;22m[90m [39m[90mnotification job is idempotent and never sends cpf[39m[90m [39m[33m→ file_get_conte[39m[90m…[39m [90m0.02s[39m  
+  [33;1m![39;22m[90m [39m[90mprovider failure is observable and failed callback marks delivery f[39m[90m…[39m [90m0.03s[39m  
+  [33;1m![39;22m[90m [39m[90mfailed notification can be requeued without resetting attempt histo[39m[90m…[39m [90m0.02s[39m  
+  [33;1m![39;22m[90m [39m[90mnotification job has bounded retries and backoff[39m[90m [39m[33m→ file_get_content[39m[90m…[39m [90m0.01s[39m  
+
+  [30;43;1m WARN [39;49;22m[39m Tests\Feature\Phase3\OrderCancellationTest[39m
+  [33;1m![39;22m[90m [39m[90mbuyer can cancel purchase and seat becomes available again[39m[90m [39m[33m→ file_g[39m[90m…[39m [90m0.03s[39m  
+  [33;1m![39;22m[90m [39m[90mother buyer cannot view or cancel purchase[39m[90m [39m[33m→ file_get_contents(/var[39m[90m…[39m [90m0.02s[39m  
+
+  [30;43;1m WARN [39;49;22m[39m Tests\Feature\Phase5\Phase5FeaturesTest[39m
+  [33;1m![39;22m[90m [39m[90mevent search filters and returns 503 when search is disabled[39m[90m [39m[33m→ file[39m[90m…[39m [90m0.01s[39m  
+  [33;1m![39;22m[90m [39m[90monly event owner can view report and audit[39m[90m [39m[33m→ file_get_contents(/var[39m[90m…[39m [90m0.01s[39m  
+  [33;1m![39;22m[90m [39m[90mfailure rate monitor opens and resolves alert[39m[90m [39m[33m→ file_get_contents(/[39m[90m…[39m [90m0.02s[39m  
+  [33;1m![39;22m[90m [39m[90mops metrics requires organizer[39m[90m [39m[33m→ file_get_contents(/var/www/html/.e[39m[90m…[39m [90m0.01s[39m  
+
+  [30;43;1m WARN [39;49;22m[39m Tests\Feature\Phase5\TicketReissueAuditTest[39m
+  [33;1m![39;22m[90m [39m[90mbuyer can reissue own ticket and audit records the change[39m[90m [39m[33m→ file_ge[39m[90m…[39m [90m0.03s[39m  
+  [33;1m![39;22m[90m [39m[90mother buyer cannot reissue ticket[39m[90m [39m[33m→ file_get_contents(/var/www/html[39m[90m…[39m [90m0.02s[39m  
+
+  [30;43;1m WARN [39;49;22m[39m Tests\Feature\Reservations\ReserveSeatsTest[39m
+  [33;1m![39;22m[90m [39m[90mbuyer can reserve available seats[39m[90m [39m[33m→ file_get_contents(/var/www/html[39m[90m…[39m [90m0.02s[39m  
+  [33;1m![39;22m[90m [39m[90msame seat cannot be reserved twice[39m[90m [39m[33m→ file_get_contents(/var/www/htm[39m[90m…[39m [90m0.01s[39m  
+  [33;1m![39;22m[90m [39m[90mmulti seat reservation is all or nothing[39m[90m [39m[33m→ file_get_contents(/var/w[39m[90m…[39m [90m0.02s[39m  
+  [33;1m![39;22m[90m [39m[90mexpired seat can be reserved again[39m[90m [39m[33m→ file_get_contents(/var/www/htm[39m[90m…[39m [90m0.02s[39m  
+  [33;1m![39;22m[90m [39m[90mseat from another event is rejected[39m[90m [39m[33m→ file_get_contents(/var/www/ht[39m[90m…[39m [90m0.01s[39m  
+  [33;1m![39;22m[90m [39m[90morganizer cannot make reservation[39m[90m [39m[33m→ file_get_contents(/var/www/html[39m[90m…[39m [90m0.01s[39m  
+  [33;1m![39;22m[90m [39m[90mexpiration command releases seat[39m[90m [39m[33m→ file_get_contents(/var/www/html/[39m[90m…[39m [90m0.01s[39m  
+
+  [90mTests:[39m    [33;1m27 warnings[39;22m[90m (132 assertions)[39m
+  [90mDuration:[39m [39m2.03s[39m
+

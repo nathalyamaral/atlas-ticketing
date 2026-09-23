@@ -1,0 +1,98 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /scripts/seat-contention.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 50 max VUs, 1m0s max duration (incl. graceful stop):
+              * seat_contention: 1 iterations for each of 50 VUs (maxDuration: 30s, gracefulStop: 30s)
+
+
+Run               [ 100% ] setup()
+seat_contention   [   0% ]
+
+Run               [ 100% ] setup()
+seat_contention   [   0% ]
+
+Run               [ 100% ] setup()
+seat_contention   [   0% ]
+
+Run               [ 100% ] setup()
+seat_contention   [   0% ]
+
+Run               [ 100% ] setup()
+seat_contention   [   0% ]
+
+Run               [ 100% ] setup()
+seat_contention   [   0% ]
+
+Run               [ 100% ] setup()
+seat_contention   [   0% ]
+
+running (0m08.0s), 29/50 VUs, 21 complete and 0 interrupted iterations
+seat_contention   [  42% ] 50 VUs  00.1s/30s  21/50 iters, 1 per VU
+
+
+  █ THRESHOLDS 
+
+    checks
+    ✓ 'rate==1' rate=100.00%
+
+    seat_conflicts
+    ✓ 'count==40' count=40
+
+    successful_reservations
+    ✓ 'count==10' count=10
+
+    unexpected_responses
+    ✓ 'count==0' count=0
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 50      6.167834/s
+    checks_succeeded...: 100.00% 50 out of 50
+    checks_failed......: 0.00%   0 out of 50
+
+    ✓ response is expected
+
+    CUSTOM
+    seat_conflicts.................: 40     4.934267/s
+    successful_reservations........: 10     1.233567/s
+    unexpected_responses...........: 0      0/s
+
+    HTTP
+    http_req_duration..............: avg=135.88ms min=15.08ms med=156.19ms max=210.26ms p(90)=173.18ms p(95)=188.56ms
+      { expected_response:true }...: avg=137.39ms min=15.08ms med=156.21ms max=187.99ms p(90)=158.51ms p(95)=159.5ms 
+    http_req_failed................: 39.60% 40 out of 101
+    http_reqs......................: 101    12.459024/s
+
+    EXECUTION
+    iteration_duration.............: avg=117.22ms min=22.67ms med=119.21ms max=210.63ms p(90)=189.72ms p(95)=200.3ms 
+    iterations.....................: 50     6.167834/s
+    vus............................: 29     min=0         max=29
+    vus_max........................: 50     min=50        max=50
+
+    NETWORK
+    data_received..................: 40 kB  5.0 kB/s
+    data_sent......................: 24 kB  3.0 kB/s
+
+
+
+
+running (0m08.1s), 00/50 VUs, 50 complete and 0 interrupted iterations
+seat_contention ✓ [ 100% ] 50 VUs  00.2s/30s  50/50 iters, 1 per VU
+
+DATABASE VALIDATION
+Event ID: 24
+Active reservations: 10
+Duplicated seats: 0
+Confirmed orders: 10
+Sold seats: 10
+Duplicated sales: 0

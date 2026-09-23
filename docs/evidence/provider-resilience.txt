@@ -1,0 +1,7 @@
+==> Reset provider and prepare isolated event
+==> Put provider in SLOW mode before checkout
+Confirmation stayed independent from slow provider: HTTP=201 TIME=0.019353s
+==> Switch provider to DOWN before asynchronous delivery
+Observed provider failure; attempts=1
+==> Recover provider
+PASS: checkout ignored slow provider, order remained confirmed during outage, and notification recovered automatically (attempts=2).

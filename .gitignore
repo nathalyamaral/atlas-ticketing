@@ -1,0 +1,9 @@
+.idea
+.DS_Store
+api/.env
+api/vendor/
+api/node_modules/
+api/.phpunit.result.cache
+docs/evidence/*.tmp
+node_modules/
+*.log

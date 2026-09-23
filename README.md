@@ -411,7 +411,7 @@ Depois do k6, o script confirma os 10 vencedores e consulta o MySQL para exigir:
 A evidência é gravada em `docs/evidence/seat-contention.txt`.
 
 <!-- LOAD_TEST_RESULT_START -->
-**Resultado versionado:** regenere com `make load-test` na versão final antes de enviar. O script só atualiza este bloco quando thresholds e validações SQL passam.
+**Última execução final:** 2026-09-23T22:21:49Z - 50 VUs disputando 10 assentos; 10 reservas vencedoras, 40 conflitos, 0 respostas inesperadas; as 10 reservas vencedoras foram confirmadas e a validação SQL encontrou 10 assentos vendidos e 0 vendas duplicadas.
 <!-- LOAD_TEST_RESULT_END -->
 
 ## 8. Fase 3 — Confirmação, Ticket e comunicação externa

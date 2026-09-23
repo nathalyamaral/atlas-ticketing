@@ -1,0 +1,23 @@
+
+  POST       api/auth/login ............................. AuthController@login
+  POST       api/auth/logout ........................... AuthController@logout
+  GET|HEAD   api/events ................................ EventController@index
+  POST       api/events ................................ EventController@store
+  GET|HEAD   api/events/search ................... EventSearchController@index
+  GET|HEAD   api/events/{event}/audit ............. EventAuditController@index
+  GET|HEAD   api/events/{event}/report ............ EventReportController@show
+  POST       api/events/{event}/reservations ..... ReservationController@store
+  POST       api/events/{event}/seats ................... SeatController@store
+  GET|HEAD   api/events/{event}/seats ................... SeatController@index
+  GET|HEAD   api/me ........................................ AuthController@me
+  GET|HEAD   api/ops/metrics .................... OperationsController@metrics
+  GET|HEAD   api/orders ................................ OrderController@index
+  GET|HEAD   api/orders/{order} ......................... OrderController@show
+  POST       api/orders/{order}/cancel ................ OrderController@cancel
+  GET|HEAD   api/reservations/{reservation} ....... ReservationController@show
+  POST       api/reservations/{reservation}/confirm ReservationController@con…
+  GET|HEAD   api/system/alerts ................... SystemAlertController@index
+  POST       api/tickets/{ticket}/reissue ........... TicketController@reissue
+
+                                                           Showing [19] routes
+

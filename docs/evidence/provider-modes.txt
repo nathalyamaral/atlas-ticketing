@@ -1,0 +1,13 @@
+==> normal
+PASS normal HTTP=202
+==> idempotent retry
+PASS deduplicated retry
+==> error
+PASS error HTTP=500
+==> down
+PASS down HTTP=503
+==> duplicate
+PASS duplicate mode HTTP=202 with duplicate delivery evidence
+==> slow
+PASS slow HTTP=202 TIME=5.000803s
+PASS: all provider modes reproduced.
